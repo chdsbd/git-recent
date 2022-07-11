@@ -1,4 +1,4 @@
-# git-recent-fzf
+# [git-recent-fzf ![npm](https://img.shields.io/npm/v/git-recent-fzf)](https://www.npmjs.com/package/git-recent-fzf)
 
 Search recent git branches with fzf
 
