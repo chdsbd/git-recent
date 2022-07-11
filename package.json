@@ -1,7 +1,7 @@
 {
-  "name": "git-recent",
+  "name": "@cdignam/git-recent-fzf",
   "version": "1.1.1",
-  "description": "List recent git branches, formatted so fancy",
+  "description": "Search recent git branches with fzf",
   "bin": {
     "git-recent": "git-recent"
   },
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulirish/git-recent.git"
+    "url": "git+https://github.com/chdsbd/git-recent-fzf.git"
   },
   "keywords": [
     "git",
     "branches"
   ],
-  "author": "Paul Irish",
+  "author": "Christopher Dignam",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/paulirish/git-recent/issues"
+    "url": "https://github.com/chdsbd/git-recent-fzf/issues"
   },
-  "homepage": "https://github.com/paulirish/git-recent#readme"
+  "homepage": "https://github.com/chdsbd/git-recent-fzf#readme"
 }
