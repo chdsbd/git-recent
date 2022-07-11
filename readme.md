@@ -18,4 +18,4 @@ Optionally, add `-n<int>` to see the most recent `<n>` branches
 
 Install via NPM:
 
-    npm install --global @cdignam/git-recent-fzf
+    npm install --global git-recent-fzf
