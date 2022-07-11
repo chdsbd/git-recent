@@ -34,26 +34,23 @@ done
 shift $((OPTIND-1))
 
 format="\
-%(HEAD) \
-$branch|\
-%(color:bold red)%(objectname:short)%(color:reset) \
-%(color:bold green)(%(committerdate:relative))%(color:reset) \
-%(color:bold blue)%(authorname)%(color:reset) \
-%(color:yellow)%(upstream:track)%(color:reset)
-$spacer|\
-%(contents:subject)
-$spacer|"
+$branch %(HEAD) | \
+%(color:bold red)%(objectname:short)%(color:reset) | \
+%(color:bold green)(%(committerdate:relative))%(color:reset) | \
+%(color:bold blue)%(authorname)%(color:reset) | \
+%(contents:subject)"
 
 lessopts="--tabs=4 --quit-if-one-screen --RAW-CONTROL-CHARS --no-init"
 
-git for-each-ref \
+branch=$(git for-each-ref \
     --color=always \
     --count=$COUNT \
     --sort=-committerdate \
     "refs/heads/"  \
     --format="$format" \
-  | column -ts '|'  \
-  | less "$lessopts"
+  | column -ts '|' \
+  | fzf --ansi --layout=reverse --bind='left-click:accept'  --nth=1 | awk '{ print $1 }')
+git checkout $branch
 
 # The above command:
 #   for all known branches,
